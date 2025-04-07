@@ -1,0 +1,346 @@
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+
+:root {
+    --blue: #00b1e7; /* Culoare albastră */
+    --white: #e4f8ff; /* Culoare albă */
+    --snow: #fafafa; /* Culoare gri deschis */
+    --light-white: #aaa; /* Culoare gri deschis mai închis */
+    --black: #3d3d3d; /* Culoare negru */
+    --light-bg: #4b4b4b; /* Culoare gri închis */
+}
+
+* {
+    font-family: 'Rubik', sans-serif; /* Font Rubik pentru toate elementele */
+    margin: 0; /* Elimină marginile implicite */
+    padding: 0; /* Elimină padding-ul implicit */
+    box-sizing: border-box; /* Setează box-sizing la border-box */
+    outline: none; /* Elimină conturul */
+    border: none; /* Elimină bordura */
+    text-decoration: none; /* Elimină sublinierea */
+    transition: .2s linear; /* Adaugă tranziție liniară */
+    text-transform: capitalize; /* Transformă textul în capitalizare */
+}
+
+*::selection {
+    background-color: var(--white); /* Fundal alb pentru selecția textului */
+    color: var(--black); /* Culoare neagră pentru textul selectat */
+}
+
+html {
+    font-size: 62.5%; /* Dimensiunea fontului de bază */
+    overflow-x: hidden; /* Ascunde scroll-ul orizontal */
+    scroll-behavior: smooth; /* Scroll lin */
+    scroll-padding-top: 8rem; /* Adaugă un padding de 8rem pentru scroll */
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Font Poppins pentru corpul paginii */
+    background-image: url(bacback.jpg); /* Imagine de fundal */
+    background-repeat: no-repeat; /* Fundal fără repetare */
+    background-size: 500%; /* Mărirea imaginii de fundal */
+}
+
+section {
+    max-width: 1200px; /* Lățimea maximă a secțiunii */
+    margin: 0 auto; /* Centrează secțiunea pe orizontală */
+    padding: 2rem; /* Adaugă padding la secțiune */
+}
+
+.flex {
+    font-size: medium; /* Dimensiune font medie */
+    color: var(--light-white); /* Culoare gri deschis pentru text */
+    font-style: initial; /* Setează stilul fontului la valoarea inițială */
+}
+
+.btn {
+    display: inline-block; /* Butonul este inline-block */
+    margin-top: 1rem; /* Margine sus */
+    border-radius: 5rem; /* Colțuri rotunjite */
+    background-color: var(--light-bg); /* Fundal gri închis */
+    cursor: pointer; /* Arată cursorul ca pointer */
+    color: var(--white); /* Culoare albă pentru text */
+    font-size: 1.8rem; /* Dimensiune font */
+    padding: 1rem 3rem; /* Padding pe toate laturile */
+}
+
+.btn:hover {
+    background-color: var(--white); /* Schimbă fundalul la alb la hover */
+    color: var(--blue); /* Schimbă culoarea textului la albastru la hover */
+}
+
+.heading {
+    margin-bottom: 2.5rem; /* Margine jos */
+    text-align: center; /* Centrează textul */
+    font-size: 4rem; /* Dimensiune mare pentru titlu */
+    color: var(--white); /* Culoare albă pentru titlu */
+}
+
+.heading span {
+    color: var(--blue); /* Culoare albastră pentru textul din span */
+}
+
+.header {
+    position: absolute; /* Header absolut pe pagină */
+    top: 0; /* Poziționează la marginea de sus */
+    left: 0; /* Aliniază la stânga */
+    right: 0; /* Aliniază la dreapta */
+    z-index: 1000; /* Setează z-index mare */
+    background-color: var(--white); /* Fundal alb pentru header */
+}
+
+.header .flex {
+    position: relative; /* Poziționare relativă */
+    display: flex; /* Folosește flexbox */
+    align-items: center; /* Aliniază elementele pe axa verticală */
+    justify-content: center; /* Centrează elementele pe axa orizontală */
+    gap: 15px; /* Spațiu între elemente */
+    margin-top: 20px; /* Margine sus */
+}
+
+.header .flex .logo {
+    font-size: 2.5rem; /* Dimensiune font pentru logo */
+    color: var(--white); /* Culoare albă pentru logo */
+}
+
+.header .flex .navbar a {
+    margin-left: 2rem; /* Margine stânga pentru linkuri */
+    color: var(--light-white); /* Culoare gri deschis pentru linkuri */
+    font-size: 2rem; /* Dimensiune font pentru linkuri */
+}
+
+.header .flex .navbar a:hover {
+    color: var(--blue); /* Culoare albastră pentru linkuri la hover */
+}
+
+#menu-btn {
+    cursor: pointer; /* Arată cursorul ca pointer */
+    color: var(--white); /* Culoare albă */
+    font-size: 2.5rem; /* Dimensiune font */
+    display: none; /* Ascunde butonul inițial */
+}
+
+.clasificare {
+    margin-top: 6rem; /* Margine sus */
+}
+
+.clasificare .row {
+    display: flex; /* Folosește flexbox */
+    align-items: center; /* Aliniază elementele pe axa verticală */
+    flex-wrap: wrap-reverse; /* Permite ca elementele să se înfășoare invers */
+    gap: 1.5rem; /* Spațiu între elemente */
+}
+
+.clasificare .row .content {
+    flex: 1 1 30rem; /* Permite flexarea conținutului */
+    text-align: center; /* Centrează textul */
+}
+
+.clasificare .row .image {
+    flex: 1 1 40rem; /* Permite flexarea imaginii */
+    text-align: center; /* Centrează imaginea */
+}
+
+.clasificare .row .image .img {
+    width: 100%; /* Setează lățimea imaginii la 100% */
+}
+
+.clasificare .row .content h3 {
+    margin-bottom: 1rem; /* Margine jos pentru titlu */
+    font-size: 7rem; /* Dimensiune font mare pentru titlu */
+    color: var(--snow); /* Culoare gri deschis pentru titlu */
+    line-height: 1; /* Înălțime linie 1 */
+}
+
+.clasificare .row .content h3 span {
+    color: var(--blue); /* Culoare albastră pentru span */
+}
+
+.count .box-container {
+    display: grid; /* Folosește grid */
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr)); /* Coloane adaptabile */
+    gap: 1.5rem; /* Spațiu între casete */
+    align-items: flex-start; /* Aliniază la începutul axei verticale */
+}
+
+.count .box-container .box {
+    background-color: var(--light-bg); /* Fundal gri închis pentru casete */
+    border-radius: .5rem; /* Colțuri rotunjite */
+    padding: 2rem; /* Padding interior */
+    display: flex; /* Folosește flexbox */
+    align-items: center; /* Aliniază pe axa verticală */
+    justify-content: center; /* Centrează pe axa orizontală */
+    gap: 2rem; /* Spațiu între elemente */
+}
+
+.count .box-container .box i {
+    font-size: 5rem; /* Dimensiune mare pentru iconițe */
+    color: var(--blue); /* Culoare albastră pentru iconițe */
+    margin-bottom: .5rem; /* Margine jos */
+}
+
+.count .box-container .box .content h3 {
+    font-size: 2rem; /* Dimensiune font pentru titluri */
+    color: var(--white); /* Culoare albă pentru titluri */
+}
+
+.count .box-container .box .content p {
+    font-size: 1.6rem; /* Dimensiune font pentru text */
+    color: var(--light-white); /* Culoare gri deschis pentru text */
+}
+
+.evolutie .row {
+    display: flex;/* Folosește flexbox pentru rânduri */
+    align-items: center;/* Aliniază elementele pe axa verticală */
+    gap: 1.5rem;/* Adaugă spațiu între elemente */
+
+    flex-wrap: wrap;/* Permite ca elementele să se înfășoare */
+}
+
+.evolutie .row .image {
+    flex: 1 1 40rem; /* Permite imaginii să se adapteze în funcție de dimensiune */
+}
+
+.evolutie .row .image img {
+    width: 100%; /* Setează lățimea imaginii la 100% */
+}
+
+.evolutie .row .content {
+    text-align: center;/* Centrează textul */
+    flex: 1 1 40rem;/* Permite conținutului să se adapteze în funcție de dimensiune */
+}
+
+.evolutie .row .content h3 {
+    font-size: 3rem;/* Mărimea fontului pentru titluri */
+    color: var(--snow);/* Culoare gri deschis pentru titluri */
+}
+
+
+.evolutie .row .content p {
+    padding: 1rem 0;
+    line-height: 2;
+    font-size: 1.6rem;/* Mărimea fontului pentru descriere */
+    color: var(--black);
+}
+
+.procurare .row {
+    display: flex; /* Folosește flexbox */
+    align-items: center; /* Aliniază elementele pe axa verticală */
+    gap: 1.5rem; /* Spațiu între elemente */
+    flex-wrap: wrap; /* Permite înfășurarea elementelor */
+    flex-direction: row; /* Direcție orizontală pentru elemente */
+}
+
+.procurare .row .image {
+    flex: 1 1 40rem; /* Flexibilitate pentru imagine */
+    order: 2; /* Schimbă ordinea imaginii */
+    display: flex; /* Flexbox pentru imagine */
+    justify-content: flex-end; /* Aliniază imaginea la dreapta */
+}
+
+.procurare .row .image img {
+    width: 100%; /* Lățimea imaginii */
+}
+
+.procurare .row .content {
+    text-align: center; /* Centrează textul */
+    flex: 1 1 40rem; /* Flexibilitate pentru conținut */
+    order: 1; /* Ordine pentru conținut */
+}
+
+.procurare .row .content h3 {
+    font-size: 3rem; /* Dimensiune font pentru titluri */
+    color: var(--snow); /* Culoare gri deschis pentru titluri */
+}
+
+.procurare .row .content p {
+    padding: 1rem 0; /* Padding vertical */
+    line-height: 2; /* Înălțime linie */
+    font-size: 1.6rem; /* Dimensiune font */
+    color: var(--black); /* Culoare neagră pentru text */
+}
+
+.swiper-pagination-bullet {
+    background-color: var(--white); /* Fundal alb pentru bullet-uri */
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--blue); /* Fundal albastru pentru bullet-ul activ */
+}
+
+
+.galerie .row {
+    display: flex;/* Folosește flexbox pentru galerie */
+    align-items: center;/* Aliniază vertical */
+    justify-content: center; /* Centrează conținutul pe orizontală */
+    flex-wrap: wrap;/* Permite înfășurarea elementelor */
+    gap: 1.5rem;/* Spațiu între elemente */
+}
+
+.galerie.row .image {
+    flex: 1 1 40rem;
+}/* Flexibilitate pentru imagine */
+
+.galerie .row .image img { 
+    width: 500px;/* Lățime fixă pentru imagine */
+    height:300px;/* Înălțime fixă pentru imagine */
+    object-fit: cover;/* Ajustează imaginea pentru a acoperi complet cadrul */
+   
+}
+
+.galerie .row form {
+    flex: 1 1 40rem; /* Flexibilitate pentru formular */
+}
+
+.galerie.row form .box {
+    width: 100%;/* Lățime completă pentru box */
+    margin-top: 1rem; /* Margine sus */
+    margin-bottom: 2rem; /* Margine jos */
+    border-radius: .5rem;/* Colțuri rotunjite */
+    background-color: var(--light-bg);/* Fundal gri închis */
+    font-size: 1.8rem;/* Dimensiune font */
+    color: var(--white); /* Culoare albă pentru text */
+    padding: 1.4rem; /* Padding interior */
+    text-transform: none;
+}
+
+.galerie .row form span {
+    font-size: 1.6rem;/* Dimensiune font pentru span */
+    color: var(--light-white)/* Culoare gri deschis */
+}
+
+.galerie .row form .radio {
+    margin-top: 2rem;/* Margine sus */
+    margin-bottom: 1rem; /* Margine jos */
+ }
+.footer {
+    background-color: var(--white); /* Fundal alb pentru footer */
+    text-align: center; /* Centrează textul */
+}
+
+.footer .share a {
+    margin: 0 .3rem; /* Spațiu între linkuri */
+    height: 4.5rem; /* Înălțimea iconițelor */
+    width: 4.5rem; /* Lățimea iconițelor */
+    line-height: 4.5rem; /* Înălțimea liniei pentru iconițe */
+    border-radius: 50%; /* Colțuri rotunjite pentru iconițe */
+    font-size: 2rem; /* Dimensiune font */
+    color: var(--white); /* Culoare albă */
+    background-color: var(--black); /* Fundal negru */
+}
+
+.footer .share a:hover {
+    background-color: var(--blue); /* Fundal albastru la hover */
+}
+
+.footer .credit {
+    margin-top: 2.5rem; /* Margine sus */
+    padding-top: 1.5rem; /* Padding sus */
+    border-top: .1rem solid var(--light-white); /* Linie de separare */
+    font-size: 2rem; /* Dimensiune font pentru credit */
+}
+
